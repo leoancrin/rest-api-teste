@@ -19,7 +19,7 @@ router.get('/allusers', (req,res,next) => {
         
         // realizando a query
         conn.query(
-            'SELECT * FROM usuarios',    
+            'SELECT id, email FROM usuarios',    
             (error, resultado, fields) => {
                 conn.release(); //libera a conexão após a query por estar usando createPool
                 if (error) {
