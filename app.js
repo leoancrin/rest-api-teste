@@ -15,6 +15,12 @@ app.listen(PORT, () =>{
     console.log(`Servidor rodando em http://localhost:${PORT}`);
 });
 
+app.get('/', (req,res,next) => {
+    res.status(200).send({
+        mensagem: 'Bem vindo a minha API'
+    });
+});
+
 app.use('/exemplo', rotaExemplo);
 app.use('/usuarios', rotaUsuario);
 
