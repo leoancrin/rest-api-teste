@@ -11,6 +11,32 @@ router.get('/', (req,res,next) => {
     });
 });
 
+// MOSTRA TODOS USUARIOS
+
+router.get('/allusers', (req,res,next) => {
+
+    mysql.getConnection((error, conn) => {       // conectando ao db para fazer um post
+        
+        // realizando a query
+        conn.query(
+            'SELECT * FROM usuarios',    
+            (error, resultado, fields) => {
+                conn.release(); //libera a conexão após a query por estar usando createPool
+                if (error) {
+                    return res.status(500).send({
+                        error: error,
+                        response: null
+                    });
+                }
+
+                res.status(200).send({
+                    resultado
+                });
+            }
+        );
+    });
+});
+
 
 // CADASTRO
 router.post('/cadastro', (req,res,next) => {
