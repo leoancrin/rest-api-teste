@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const mysql = require('../mysql.js').pool; // pegando o arquivo com a conexão
+const mysql = require('../database/mysql.js').pool; // pegando o arquivo com a conexão
 const bcrpyt = require('bcrypt'); // biblioteca para fazer a criptografar as senhas
 
 // ACESSO
