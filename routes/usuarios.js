@@ -30,7 +30,7 @@ router.get('/all', (req,res,next) => {
                 }
 
                 res.status(200).send({
-                    resultado
+                    Usuários
                 });
             }
         );
