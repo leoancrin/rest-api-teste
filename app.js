@@ -1,5 +1,6 @@
 const express = require('express');
 const PORT = process.env.PORT || 3000;
+const cors = require('cors');
 
 //teste
 
@@ -10,6 +11,7 @@ const rotaExemplo = require('./routes/rota_exemplo.js');
 const rotaInicio = require('./routes/rota_inicio.js');
 const rotaUsuario = require('./routes/usuarios.js');
 
+app.use(cors());
 app.use(express.json());
 
 app.listen(PORT, () =>{
