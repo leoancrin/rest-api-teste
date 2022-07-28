@@ -1,7 +1,7 @@
 {
   "name": "rest-api-teste",
   "version": "1.0.0",
-  "description": "api de login",
+  "description": "api de login pessoal",
   "main": "index.js",
   "scripts": {
     "dev": "nodemon -r dotenv/config app.js",
