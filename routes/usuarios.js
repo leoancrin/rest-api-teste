@@ -82,7 +82,10 @@ router.post('/login', (req,res,next) => {
             
             bcrpyt.compare(req.body.senha, results[0].senha, (err, results) => {
                 if (results) {
-                    return res.status(301).redirect('https://api-teste-heroku-leooliveira.herokuapp.com/usuarios/all');
+                    return res.status(201).send({ 'Autenticação feita com sucesso', Usuario: {
+                            email: req.body.email,
+                            id: results.insertId
+                        }});
                 } else {
                     return res.status(401).send({ mensagem: 'Falha na autenticação, usuário ou senha inválidos' });
                 }
