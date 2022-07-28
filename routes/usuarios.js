@@ -13,7 +13,7 @@ router.get('/', (req,res,next) => {
 
 // MOSTRA TODOS USUARIOS
 
-router.get('/allusers', (req,res,next) => {
+router.get('/all', (req,res,next) => {
 
     mysql.getConnection((error, conn) => {       // conectando ao db para fazer um post
         
