@@ -3,6 +3,14 @@ const router = express.Router();
 const mysql = require('../mysql.js').pool; // pegando o arquivo com a conexão
 const bcrpyt = require('bcrypt'); // biblioteca para fazer a criptografar as senhas
 
+// ACESSO
+
+router.get('/', (req,res,next) => {
+    res.status(200).send({
+        mensagem: 'Bem vindo a minha API na área de usuários'
+    });
+});
+
 
 // CADASTRO
 router.post('/cadastro', (req,res,next) => {
