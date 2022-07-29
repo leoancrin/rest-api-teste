@@ -14,4 +14,4 @@ O que fiz:
 - Inserir o HTML e CSS criado em arquivos ejs
 
 O que falta fazer:
-- Autenticar o usuário via login e enviar para a página de dashboard
+- Autenticar o usuário via login e a partir dessa autenticação mudar para a página de dashboard
