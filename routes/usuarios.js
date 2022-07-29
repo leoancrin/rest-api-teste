@@ -64,7 +64,12 @@ router.post('/cadastro', (req,res,next) => {
     });
 });
 
-// LOGIN
+// PAGINA LOGIN
+
+router.get('/login', (request,response) => {
+    response.render('pages/login.ejs');
+});
+
 router.post('/login', (req,res,next) => {
 
     mysql.getConnection((error, conn) => {
