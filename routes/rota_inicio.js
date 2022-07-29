@@ -12,6 +12,10 @@ router.get('/login', (request,response) => {
     response.render('pages/login.ejs');
 });
 
+router.get('/register', (request,response) => {
+    response.render('pages/register.ejs');
+});
+
 router.get('/dashboard', (request,response) => {
     response.render('pages/dashboard.ejs');
 });
