@@ -64,11 +64,7 @@ router.post('/cadastro', (req,res,next) => {
     });
 });
 
-// PAGINA LOGIN
-
-router.get('/login', (request,response) => {
-    response.render('pages/login.ejs');
-});
+// LOGIN
 
 router.post('/login', (req,res,next) => {
 

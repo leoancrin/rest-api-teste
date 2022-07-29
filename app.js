@@ -8,7 +8,7 @@ const cors = require('cors');
 const app = express();
 
 const rotaExemplo = require('./routes/rota_exemplo.js');
-const rotaInicio = require('./routes/rota_inicio.js');
+const rotaPaginas = require('./routes/rota_inicio.js');
 const rotaUsuario = require('./routes/usuarios.js');
 
 app.use(cors());
@@ -24,7 +24,7 @@ app.listen(PORT, () =>{
 });
 
 
-app.use('/', rotaInicio);
+app.use('/', rotaPaginas);
 app.use('/exemplo', rotaExemplo);
 app.use('/usuarios', rotaUsuario);
 

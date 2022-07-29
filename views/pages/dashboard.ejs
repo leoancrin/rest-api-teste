@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../img/favicon.ico" type="img/x-icon" />
+    <link rel="stylesheet" type="text/css" href="css/dashboard.css" />
+    <link rel="stylesheet" type="text/css" href="css/dashboardsponsive.css" />
+    <title> Dashboard </title>
+</head>
+<body>
+  <div id="flex-container">
+    <aside class="menu-lateral">
+      <div>
+        <img src="../img/logo.svg" class="logo-aside">
+      </div>
+      <div class="user">
+          <img src="../img/icon-user.svg" class="user-body">
+          <p>Usuario</p>    
+      </div>
+      <nav>
+          <ul>
+              <li class="item-1"><img src="../img/dashboard.svg" class="menu-image">Dashboard</li>
+              <li class="item-2"><img src="../img/config-completo.svg" class="menu-image">Config.</li>
+              <li class="item-3"><img src="../img/dados.svg" class="menu-image">Dados</li>
+              <li class="item-4"><img src="../img/conta.svg" class="menu-image">Conta</li>
+              <li class="item-5"><img src="../img/sair.svg" class="menu-image">Sair</li>
+          </ul>
+      </nav>
+    </aside>
+    <header class="header-mobile">
+      <nav>
+        <div class="mobile-menu">
+          <div class="line-1"></div>
+          <div class="line-2"></div>
+          <div class="line-3"></div>
+        </div>
+        <ul class="nav-list">
+            <li class="nav-item">Dashboard</li>
+            <li class="nav-item">Configurações</li>
+            <li class="nav-item">Dados</li>
+            <li class="nav-item">Conta</li>
+            <li class="nav-item">Sair</li>
+        </ul>
+    </nav>
+    </header>
+    <main id="dashboard">
+      <h1>DASHBOARD</h1>
+      <div id="container">
+        <section id="driver" class="row1">
+          <div class="img-container">
+            <img src="../img/person.svg" alt="ícone pessoa" >
+            <p><strong>Motorista - João da Silva</strong></p>
+          </div>       
+          <p>Status da operação: <span class="operation-status" id="operation-status"></span></p>
+          <p>Botão de pânico: <span class="panic-button" id="panic-button"></span></p>
+        </section>
+    
+        <section id="delivery" class="row1">
+          <h2>Prazo para entrega</h2>
+          <p><strong>27/10/2022</strong></p>
+        </section>
+    
+        <section id="vehicle" class="row2">
+          <h2>Dados do veículo</h2>
+          <div id="vehicle-container">
+            <div id="velocity-container">
+              <h3>Velocidade</h3>
+              <p class="velocity" id="velocity"></p>
+            </div>
+            <div id="gas-container">
+              <h3>Combustível</h3>
+              <meter value="0" min="0" max="500" id="gasoline-meter"></meter>
+              <h3 id="gas-level"></h3>
+            </div>
+          </div>          
+        </section>
+    
+        <section id="balance" class="row2"> 
+          <h2>Balanço</h2>
+          <img src="../img/balance.svg" alt="Balanço do veículo">
+        </section>
+    
+        <section id="localization" class="row3">
+          <h2>Localização</h2>
+          <img src="../img/map.svg" alt="localização do veículo">
+        </section>
+    
+        <section id="environment" class="row3">
+          <h2> Dados da carga </h2>
+          <div id="gas">  
+            <div id="chartContainer" style="height: 9em; width:11em;"></div>
+          </div>
+          <div id="environment-container">
+              <div id="humidity">
+                  <h3>Umidade</h3>
+                  <p id="humidity-meter"></p>
+                </div>
+                <div id="temperature">
+                  <h3>Temperatura</h3>
+                  <p id="temperature-meter"></p>
+                </div>
+          </div>                   
+        </section>
+        <div id="buttons">
+          <div class="button1 button">
+            <button id="button1">Caso 1</button>
+          </div>
+          <div class="button2 button">
+            <button id="button2">Caso 2</button>
+          </div>
+          <div class="button3 button">
+            <button id="button3">Caso 3</button>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div> 
+</body>
+<script src="../../public/scripts/dashboard.js"></script>
+<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+<script src="../../public/scripts/dashboard.js"></script>
+</html>
